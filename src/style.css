@@ -20,3 +20,42 @@ canvas {
   width: 100%;
   height: 100%;
 }
+
+.hud {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgb(255 255 255 / 15%);
+  border-radius: 0.5rem;
+  background: rgb(16 21 16 / 85%);
+  color: #f0f3f0;
+  font: 0.875rem/1.4 system-ui, sans-serif;
+}
+
+.hud p {
+  margin: 0.25rem 0;
+}
+
+kbd {
+  display: inline-block;
+  min-width: 1.5rem;
+  padding: 0.1rem 0.35rem;
+  border: 1px solid #718071;
+  border-radius: 0.25rem;
+  background: #263326;
+  text-align: center;
+}
+
+.loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f0f3f0;
+  font: 1rem system-ui, sans-serif;
+}
+
+.loading[hidden] {
+  display: none;
+}

@@ -1,14 +1,20 @@
 <!doctype html>
-<html lang="en">
+<html lang="nl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#101510" />
-    <title>Green Cube</title>
+    <title>Rijd met de SUV</title>
   </head>
   <body>
     <main>
-      <canvas id="scene" aria-label="A rotating green cube"></canvas>
+      <canvas id="scene" aria-label="Een bestuurbare SUV in een 3D-scene"></canvas>
+      <aside class="hud" aria-label="Besturing">
+        <p><kbd>Z</kbd> / <kbd>↑</kbd> vooruit</p>
+        <p><kbd>S</kbd> / <kbd>↓</kbd> achteruit</p>
+        <p><kbd>Q</kbd> / <kbd>←</kbd> en <kbd>D</kbd> / <kbd>→</kbd> sturen</p>
+      </aside>
+      <p id="loading" class="loading" role="status">SUV wordt geladen…</p>
     </main>
     <script type="module" src="/src/main.js"></script>
   </body>
