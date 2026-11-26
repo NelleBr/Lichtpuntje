@@ -6,7 +6,9 @@ import './style.css';
 const canvas = document.querySelector('#scene');
 const loadingMessage = document.querySelector('#loading');
 const scene = new THREE.Scene();
-scene.background = new THREE.Color('#101510');
+const horizonColor = '#164b85';
+scene.background = new THREE.Color(horizonColor);
+scene.fog = new THREE.Fog(horizonColor, 10, 40);
 
 const camera = new THREE.PerspectiveCamera(
   45,
@@ -25,6 +27,14 @@ scene.add(new THREE.HemisphereLight(0xffffff, 0x263326, 2));
 const keyLight = new THREE.DirectionalLight(0xffffff, 3);
 keyLight.position.set(3, 5, 4);
 scene.add(keyLight);
+
+const ground = new THREE.Mesh(
+  new THREE.PlaneGeometry(200, 200),
+  new THREE.MeshStandardMaterial({ color: '#071f45', roughness: 1 }),
+);
+ground.rotation.x = -Math.PI / 2;
+ground.position.y = -0.75;
+scene.add(ground);
 
 const ground = new THREE.Mesh(
   new THREE.PlaneGeometry(1000, 1000),
